@@ -1,3 +1,4 @@
+// Fichier modifie pour le projet MediWing (2026) : voir les commentaires "MediWing". Licence GPL v3, voir LICENSE.
 #ifndef DEF_H_
 #define DEF_H_
 
@@ -1674,7 +1675,7 @@
   #define ACC 0
 #endif
 
-#if defined(HMC5883) || defined(HMC5843) || defined(AK8975) || defined(MAG3110) || defined(QMC5883L)
+#if defined(HMC5883) || defined(HMC5843) || defined(AK8975) || defined(MAG3110) || defined(QMC5883L)   // MediWing : QMC5883L ajoute
   #define MAG 1
 #else
   #define MAG 0
