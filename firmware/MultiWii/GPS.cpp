@@ -1,3 +1,4 @@
+// Fichier modifie pour le projet MediWing (2026) : voir les commentaires "MediWing". Licence GPL v3, voir LICENSE.
 #include "Arduino.h"
 #include "config.h"
 #include "def.h"
@@ -1078,7 +1079,7 @@ bool GPS_newFrame(uint8_t c) {
 /***********************       UBLOX                         **************************/
 /**************************************************************************************/
 #if defined(UBLOX)
-const uint8_t UBLOX_INIT[] PROGMEM = {                                                  // PROGMEM array must be outside any function !!!
+const uint8_t UBLOX_INIT[] PROGMEM = {                                                  // PROGMEM array must be outside any function !!!   // MediWing : uint8_t au lieu de char (compile avec les IDE Arduino recents)
   0xB5,0x62,0x06,0x01,0x03,0x00,0xF0,0x05,0x00,0xFF,0x19,                            //disable all default NMEA messages
   0xB5,0x62,0x06,0x01,0x03,0x00,0xF0,0x03,0x00,0xFD,0x15,
   0xB5,0x62,0x06,0x01,0x03,0x00,0xF0,0x01,0x00,0xFB,0x11,

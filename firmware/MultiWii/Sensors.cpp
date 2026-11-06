@@ -1,3 +1,4 @@
+// Fichier modifie pour le projet MediWing (2026) : voir les commentaires "MediWing". Licence GPL v3, voir LICENSE.
 #include "Arduino.h"
 #include "config.h"
 #include "def.h"
