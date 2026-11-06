@@ -1,0 +1,23 @@
+# Systèmes
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Word ouvert / sauvegardes
+~$*
+*.tmp
+*.bak
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Arduino
+build/
+*.hex
+
+# Vidéos (trop lourdes pour GitHub : mettre un lien dans le compte rendu)
+*.mp4
+*.mov
+*.avi
