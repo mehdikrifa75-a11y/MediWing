@@ -1,7 +1,14 @@
 # Firmware (Arduino Mega)
 
-MultiWii 2.4 (version `release-2.4` du dépôt officiel multiwii/multiwii-firmware, licence GPLv3) configuré pour MediWing.
-Les sources sont dans `MultiWii/`. Le premier commit les contient sans modification, le second ajoute les réglages MediWing : `git diff` entre les deux montre exactement ce qui a changé.
+MultiWii 2.4 configuré pour MediWing.
+
+## Origine et licence
+
+Le code de `MultiWii/` n'a pas été écrit pour ce projet : c'est MultiWii 2.4, de Alexandre Dubus et des contributeurs listés dans `MultiWii/CREDITS.txt`.
+
+- Source : https://github.com/multiwii/multiwii-firmware, tag `release-2.4` (commit `30af392`).
+- Licence : GNU GPL version 3 ou ultérieure (en-tête de `MultiWii.cpp`). Le texte complet est dans `MultiWii/LICENSE`. Ce dossier modifié reste sous la même licence.
+- Le commit « sources MultiWii 2.4 d'origine » contient le code sans aucune modification. Les commits suivants ajoutent les réglages MediWing : `git diff` entre les deux montre exactement ce qui a changé. Les lignes modifiées sont aussi repérées par le commentaire `MediWing` dans le code.
 
 ## Ce qui a été modifié
 
