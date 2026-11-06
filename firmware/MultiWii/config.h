@@ -1,3 +1,4 @@
+// Fichier modifie pour le projet MediWing (2026) : voir les commentaires "MediWing". Licence GPL v3, voir LICENSE.
 #ifndef CONFIG_H_
 #define CONFIG_H_
 
