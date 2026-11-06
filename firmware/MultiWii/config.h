@@ -36,7 +36,7 @@
     //#define BI
     //#define TRI
     //#define QUADP
-    //#define QUADX
+    #define QUADX                 // MediWing : quadri en X (FlyFishRC Volador VX3.5)
     //#define Y4
     //#define Y6
     //#define HEX6
@@ -60,7 +60,8 @@
     //#define MINTHROTTLE 1120 // for Super Simple ESCs 10A
     //#define MINTHROTTLE 1064 // special ESC (simonk)
     //#define MINTHROTTLE 1050 // for brushed ESCs like ladybird
-    #define MINTHROTTLE 1150 // (*) (**)
+    //#define MINTHROTTLE 1150 // (*) (**)
+    #define MINTHROTTLE 1070 // MediWing : ESC HAKRC BLHeli_S, a ajuster en S2 (plus petite valeur ou les 4 moteurs tournent tous)
 
   /****************************    Motor maxthrottle    *******************************/
     /* this is the maximum value for the ESCs at full power, this value can be increased up to 2000 */
@@ -169,7 +170,7 @@
       //#define ITG3200
       //#define MPU3050
       //#define L3G4200D
-      //#define MPU6050       //combo + ACC
+      #define MPU6050       //combo + ACC   // MediWing : MPU-6050 du GY-87
       //#define LSM330        //combo + ACC
       
       /* I2C accelerometer */
@@ -183,7 +184,7 @@
       //#define MMA8451Q
 
       /* I2C barometer */
-      //#define BMP085
+      #define BMP085                         // MediWing : BMP180 du GY-87 (meme pilote que le BMP085)
       //#define MS561101BA
 
       /* I2C magnetometer */
@@ -191,6 +192,7 @@
       //#define HMC5883
       //#define AK8975
       //#define MAG3110
+      #define QMC5883L                       // MediWing : boussole QMC5883L du GPS BN-880 (pilote ajoute dans Sensors.cpp)
 
       /* Sonar */ // for visualization purpose currently - no control code behind
       //#define SRF02 // use the Devantech SRF i2c sensors
@@ -363,6 +365,7 @@ At this moment you can use this function only with WinGUI 2.3 release. MultiWiiC
          Select the right line depending on your radio brand. Feel free to modify the order in your PPM order is different */
       //#define SERIAL_SUM_PPM         PITCH,YAW,THROTTLE,ROLL,AUX1,AUX2,AUX3,AUX4,8,9,10,11 //For Graupner/Spektrum
       //#define SERIAL_SUM_PPM         ROLL,PITCH,THROTTLE,YAW,AUX1,AUX2,AUX3,AUX4,8,9,10,11 //For Robe/Hitec/Futaba
+      #define SERIAL_SUM_PPM         ROLL,PITCH,THROTTLE,YAW,AUX1,AUX2,AUX3,AUX4,8,9,10,11 // MediWing : RadioLink T8FB + R8EF (ordre type Futaba, PPM sur la broche 19 de la Mega)
       //#define SERIAL_SUM_PPM         ROLL,PITCH,YAW,THROTTLE,AUX1,AUX2,AUX3,AUX4,8,9,10,11 //For Multiplex
       //#define SERIAL_SUM_PPM         PITCH,ROLL,THROTTLE,YAW,AUX1,AUX2,AUX3,AUX4,8,9,10,11 //For some Hitec/Sanwa/Others
       //#define SERIAL_SUM_PPM         THROTTLE,YAW,ROLL,PITCH,AUX1,AUX2,AUX3,AUX4,8,9,10,11 //Modelcraft
@@ -597,7 +600,7 @@ At this moment you can use this function only with WinGUI 2.3 release. MultiWiiC
        PITCH, ROLL and YAW is centered and THROTTLE is set to FAILSAFE_THROTTLE value. You must set this value to descending about 1m/s or so
        for best results. This value is depended from your configuration, AUW and some other params.  Next, after FAILSAFE_OFF_DELAY the copter is disarmed, 
        and motors is stopped. If RC pulse coming back before reached FAILSAFE_OFF_DELAY time, after the small quard time the RC control is returned to normal. */
-    //#define FAILSAFE                                // uncomment  to activate the failsafe function
+    #define FAILSAFE                                // uncomment  to activate the failsafe function   // MediWing : teste en S4 (sans helices)
     #define FAILSAFE_DELAY     10                     // Guard time for failsafe activation after signal lost. 1 step = 0.1sec - 1sec in example
     #define FAILSAFE_OFF_DELAY 200                    // Time for Landing before motors stop in 0.1sec. 1 step = 0.1sec - 20sec in example
     #define FAILSAFE_THROTTLE  (MINTHROTTLE + 200)    // (*) Throttle level used for landing - may be relative to MINTHROTTLE - as in this case
@@ -666,7 +669,7 @@ At this moment you can use this function only with WinGUI 2.3 release. MultiWiiC
        in NMEA mode the GPS must be configured to output GGA and RMC NMEA sentences (which is generally the default conf for most GPS devices)
        at least 5Hz update rate. uncomment the first line to select the GPS serial port of the arduino */
        
-    //#define GPS_SERIAL 2         // should be 2 for flyduino v2. It's the serial port number on arduino MEGA
+    #define GPS_SERIAL 2         // should be 2 for flyduino v2. It's the serial port number on arduino MEGA   // MediWing : BN-880 sur Serial2 (TX2 = 16, RX2 = 17)
                                    // must be 0 for PRO_MINI (ex GPS_PRO_MINI)
                                    // note: Now a GPS can share MSP on the same port. The only constrain is to not use it simultaneously, and use the same port speed.
 
@@ -681,7 +684,7 @@ At this moment you can use this function only with WinGUI 2.3 release. MultiWiiC
 
     
     //#define NMEA
-    //#define UBLOX
+    #define UBLOX                // MediWing : BN-880 = u-blox M8N, MultiWii le configure tout seul au demarrage
     //#define MTK_BINARY16
     //#define MTK_BINARY19
     //#define INIT_MTK_GPS        // initialize MTK GPS for using selected speed, 5Hz update rate and GGA & RMC sentence or binary settings
@@ -723,7 +726,7 @@ At this moment you can use this function only with WinGUI 2.3 release. MultiWiiC
 Convert the degree+minutes into decimal degree by ==> degree+minutes*(1/60)
 Note the sign on declination it could be negative or positive (WEST or EAST)
 Also note, that maqgnetic declination changes with time, so recheck your value every 3-6 months */
-#define MAG_DECLINATION  4.02f   //(**)
+#define MAG_DECLINATION  3.0f    //(**)  // MediWing : Nice (Sophia), environ +3 deg Est en 2026, a verifier sur magnetic-declination.com
 
 // Adds a forward predictive filterig to compensate gps lag. Code based on Jason Short's lead filter implementation
 #define GPS_LEAD_FILTER               //(**)

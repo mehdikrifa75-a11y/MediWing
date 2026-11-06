@@ -1145,6 +1145,45 @@ void Device_Mag_getADC() {
 #endif
 
 // ************************************************************************************************************
+// I2C Compass QMC5883L  (ajout MediWing : boussole du GPS BN-880)
+// ************************************************************************************************************
+// Adresse I2C : 0x0D (7 bits). Ce n'est PAS un HMC5883L : adresse, registres et ordre des octets sont differents.
+//   0x00..0x05 : X, Y, Z sur 16 bits signes, octet de poids faible en premier (le HMC5883L donne X, Z, Y, poids fort en premier)
+//   0x06       : etat (bit 0 = DRDY, nouvelle mesure prete)
+//   0x09       : controle 1 = OSR[7:6] | RNG[5:4] | ODR[3:2] | MODE[1:0]
+//   0x0A       : controle 2 (bit 7 = SOFT_RST)
+//   0x0B       : periode SET/RESET, 0x01 recommande par la fiche technique
+// ************************************************************************************************************
+#if defined(QMC5883L)
+  #define MAG_ADDRESS        0x0D
+  #define MAG_DATA_REGISTER  0x00
+  #define QMC5883L_R_STATUS  0x06
+  #define QMC5883L_R_CTRL1   0x09
+  #define QMC5883L_R_CTRL2   0x0A
+  #define QMC5883L_R_SETRST  0x0B
+
+  static void Mag_init() {
+    delay(10);
+    i2c_writeReg(MAG_ADDRESS, QMC5883L_R_CTRL2,  0x80);  // SOFT_RST : remise a zero du capteur
+    delay(10);
+    i2c_writeReg(MAG_ADDRESS, QMC5883L_R_SETRST, 0x01);  // periode SET/RESET (valeur de la fiche technique)
+    i2c_writeReg(MAG_ADDRESS, QMC5883L_R_CTRL1,  0x1D);  // 00 01 01 01 : OSR 512, plage +/-8 G, 50 Hz, mode continu
+    delay(100);
+    // magGain reste a 1.0 : le QMC5883L n'a pas l'auto-test a courant de polarisation du HMC5883L.
+    // La calibration de la boussole dans MultiWiiConf (bouton CALIB_MAG) suffit.
+  }
+
+  #if !defined(MPU6050_I2C_AUX_MASTER)
+  static void Device_Mag_getADC() {
+    i2c_getSixRawADC(MAG_ADDRESS, MAG_DATA_REGISTER);   // lit X, Y, Z (6 octets a partir de 0x00)
+    MAG_ORIENTATION( (int16_t)((rawADC[1]<<8) | rawADC[0]) ,   // X
+                     (int16_t)((rawADC[3]<<8) | rawADC[2]) ,   // Y
+                     (int16_t)((rawADC[5]<<8) | rawADC[4]) );  // Z
+  }
+  #endif
+#endif
+
+// ************************************************************************************************************
 // I2C Gyroscope and Accelerometer MPU6050
 // ************************************************************************************************************
 #if defined(MPU6050)
@@ -1160,7 +1199,9 @@ static void Gyro_init() {
   i2c_writeReg(MPU6050_ADDRESS, 0x1A, GYRO_DLPF_CFG);    //CONFIG        -- EXT_SYNC_SET 0 (disable input pin for data sync) ; default DLPF_CFG = 0 => ACC bandwidth = 260Hz  GYRO bandwidth = 256Hz)
   i2c_writeReg(MPU6050_ADDRESS, 0x1B, 0x18);             //GYRO_CONFIG   -- FS_SEL = 3: Full scale set to 2000 deg/sec
   // enable I2C bypass for AUX I2C
-  #if defined(MAG)
+  // MediWing : bypass coupe avec la QMC5883L du BN-880, pour que la boussole du GY-87 (HMC5883L ou QMC5883L
+  // selon les lots, branchee sur le bus auxiliaire du MPU-6050) n'apparaisse pas sur le bus I2C principal.
+  #if defined(MAG) && !defined(QMC5883L)
     i2c_writeReg(MPU6050_ADDRESS, 0x37, 0x02);           //INT_PIN_CFG   -- INT_LEVEL=0 ; INT_OPEN=0 ; LATCH_INT_EN=0 ; INT_RD_CLEAR=0 ; FSYNC_INT_LEVEL=0 ; FSYNC_INT_EN=0 ; I2C_BYPASS_EN=1 ; CLKOUT_EN=0
   #endif
 }
