@@ -4,6 +4,7 @@ Drone quadricoptère autonome qui livre un petit kit médical (une boîte de par
 
 Projet de robotique expérimentale (RO3), Polytech Nice Sophia, Rob3, 2026-2027.
 Auteur : Mehdi Krifa.
+Outils utilisés : Claude Code (aide au code et à la rédaction).
 
 ## Objectif
 
