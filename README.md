@@ -20,7 +20,7 @@ Outils utilisés : Claude Code (aide au code et à la rédaction).
 | [`comptes-rendus/`](comptes-rendus/) | Un compte rendu par séance de TP |
 | [`firmware/`](firmware/) | MultiWii 2.4 configuré pour le drone (Arduino Mega) |
 | [`raspberry-pi/`](raspberry-pi/) | Code Python : détection ArUco, guidage, liaison MSP |
-| [`cao/`](cao/) | Pièces à imprimer : boîte du colis, loquet, support GPS |
+| [`cao/`](cao/) | Pièces à imprimer : boîte du colis, support GPS, équerre caméra, pieds |
 | [`materiel/`](materiel/) | Liste des composants et schémas de câblage |
 | [`docs/`](docs/) | Rapport bibliographique, documents, photos |
 
