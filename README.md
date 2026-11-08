@@ -28,7 +28,7 @@ Outils utilisés : Claude Code (aide au code et à la rédaction).
 
 | Séance | Date | Objectif | Compte rendu |
 |---|---|---|---|
-| S1 | 06/11/2026 | Inventaire, firmware MultiWii, pilote QMC5883L | [S1](comptes-rendus/S1-2026-11-06.md) |
+| S1 | 06/11/2026 | Inventaire, firmware MultiWii, pilote QMC5883L | [S1](comptes-rendus/S1-KRIFA.md) |
 | S2 | 10/11/2026 | Capteurs, GPS, radio et moteurs sur banc | |
 | S3 | 17/11/2026 | Assemblage sur le châssis | |
 | S4 | 24/11/2026 | Failsafe, vol stationnaire, maintien GPS | |
