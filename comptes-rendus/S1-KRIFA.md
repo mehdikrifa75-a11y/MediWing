@@ -1,6 +1,6 @@
 # Séance 1 – 06/11/2026
 
-Vendredi 06/11/2026, 8h – 12h, salle D103.
+Mehdi Krifa, groupe 13 · vendredi 06/11/2026, 8h – 12h, salle D103.
 
 ## I. Objectif de la séance
 
