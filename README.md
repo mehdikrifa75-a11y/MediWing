@@ -30,7 +30,6 @@ Outils utilisés : Claude Code (aide au code et à la rédaction).
 |---|---|---|---|
 | S1 | 06/11/2026 | Inventaire, firmware MultiWii, pilote QMC5883L | [S1](comptes-rendus/S1-KRIFA.md) |
 | S2 | 10/11/2026 | Soudure de l'ESC, firmware téléversé, détection ArUco | [S2](comptes-rendus/S2-KRIFA.md) |
-| S2 | 10/11/2026 | Capteurs, GPS, radio et moteurs sur banc | |
 | S3 | 17/11/2026 | Assemblage sur le châssis | |
 | S4 | 24/11/2026 | Failsafe, vol stationnaire, maintien GPS | |
 | S5 | 04/12/2026 | Détection du marqueur en temps réel | |
