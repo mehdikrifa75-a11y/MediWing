@@ -22,7 +22,7 @@ Avant de souder, nous avons identifié chaque élément livré avec l'ESC HAKRC 
 
 Les pastilles étant traversantes, la méthode retenue consiste à passer les pattes du condensateur dans les trous, à poser le fil de la XT60 par-dessus et à souder le tout en une seule fois. Le fil de la XT60 a été gardé à sa longueur d'origine : il pourra être raccourci côté ESC si nécessaire lors du montage.
 
-![ESC et accessoires avant la soudure](../docs/images/S2-esc-avant-soudure.jpg)
+![ESC et accessoires avant la soudure](../docs/images/S2-esc-avant-soudure-v2.jpg)
 
 *Figure 1. ESC HAKRC 4-en-1, nappe, condensateur, silentblocs et prise XT60 avant la soudure*
 
@@ -44,11 +44,11 @@ La hauteur de 20 mm ne permet pas d'empiler l'ESC, l'Arduino et le GY-87 comme p
 
 L'ESC et la prise XT60 ont été pesés séparément sur la balance de la salle (Figures 4 et 5).
 
-![Pesée de l'ESC](../docs/images/S2-pesee-esc.jpg)
+![Pesée de l'ESC](../docs/images/S2-pesee-esc-v2.jpg)
 
 *Figure 4. Pesée de l'ESC seul : 13 g*
 
-![Pesée de la XT60](../docs/images/S2-pesee-xt60.jpg)
+![Pesée de la XT60](../docs/images/S2-pesee-xt60-v2.jpg)
 
 *Figure 5. Pesée de la prise XT60 avec ses fils : 13 g*
 
@@ -83,11 +83,11 @@ N'ayant jamais soudé, j'ai parfois eu peur de mal faire : abîmer l'ESC en chau
 
 La soudure a ensuite été contrôlée et validée par M. Masson. L'ensemble soudé pèse 30 g.
 
-![Soudure, face supérieure](../docs/images/S2-soudure-dessus.jpg)
+![Soudure, face supérieure](../docs/images/S2-soudure-dessus-v2.jpg)
 
 *Figure 6. XT60 et condensateur soudés, face supérieure de l'ESC*
 
-![Soudure, face inférieure](../docs/images/S2-soudure-dessous.jpg)
+![Soudure, face inférieure](../docs/images/S2-soudure-dessous-v2.jpg)
 
 *Figure 7. Face inférieure : le fil rouge arrive bien sur la pastille marquée « + »*
 
@@ -99,7 +99,7 @@ Le temps restant a été utilisé pour avancer la partie vision, prévue en séa
 
 Le marqueur, affiché sur un téléphone, est bien détecté (Figure 8). Placé à gauche du centre, il donne dx = −619 px et dy = +37 px ; placé à droite, à la même hauteur que le centre, il donne dx = +494 px et dy = −1 px. Le signe de dx suit donc bien le côté où se trouve le marqueur.
 
-![Détection ArUco](../docs/images/S2-aruco-webcam.jpg)
+![Détection ArUco](../docs/images/S2-aruco-webcam-v2.jpg)
 
 *Figure 8. Marqueur n° 0 détecté à droite du centre : cadre vert, ligne rouge vers le centre de l'image, écart affiché en haut à gauche (dx = +494 px, dy = −1 px)*
 
