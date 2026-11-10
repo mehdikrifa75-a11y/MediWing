@@ -101,7 +101,7 @@ Le marqueur, affiché sur un téléphone, est bien détecté (Figure 8). Placé 
 
 ![Détection ArUco](../docs/images/S2-aruco-webcam.jpg)
 
-*Figure 8. Marqueur n° 0 détecté : cadre vert, ligne rouge vers le centre de l'image, écart affiché en haut à gauche (dx = −619 px, dy = +37 px)*
+*Figure 8. Marqueur n° 0 détecté à droite du centre : cadre vert, ligne rouge vers le centre de l'image, écart affiché en haut à gauche (dx = +494 px, dy = −1 px)*
 
 ## III. Résultats
 
