@@ -52,6 +52,12 @@ La Mega 2560 Pro n'étant pas encore livrée, l'essai a été fait sur une Mega 
 
 Pour appairer le récepteur, il faut maintenir le bouton ID SET du R8EF environ une seconde, radiocommande allumée à proximité : la LED clignote, puis reste fixe une fois l'appairage terminé [1]. La LED est d'abord restée rouge fixe, ce qui correspond au mode PWM, où chaque voie a sa propre broche. Deux appuis brefs sur ID SET ont fait passer la LED au bleu, c'est-à-dire en mode PPM [1].
 
+Le R8EF propose trois sorties : PWM, SBUS et PPM [1]. Le mode PPM a été retenu pour trois raisons :
+
+- en PWM, chaque voie sort sur son propre fil : il faudrait huit fils et huit broches de l'Arduino pour lire les huit voies, alors qu'en PPM un seul fil suffit, ce qui laisse les autres broches libres pour le GPS, le module HC-12, la Raspberry Pi et le servo de largage ;
+- le SBUS transmet aussi toutes les voies sur un seul fil, mais c'est une liaison série au signal inversé : l'ATmega2560 ne sait pas le lire directement, il faudrait ajouter un inverseur, et le SBUS occuperait l'un des ports série de la Mega, déjà réservés au GPS, à la Raspberry Pi et au HC-12 ;
+- le PPM est directement pris en charge par MultiWii (option `SERIAL_SUM_PPM`, configurée en séance 1), sans composant supplémentaire.
+
 ![Montage de l'essai radio](../docs/images/S3-radio-montage.jpg)
 
 *Figure 1. a) Radiocommande T8FB allumée ; b) câblage sur la Mega 2560 Strong (bleu : broche 19, vert : 5 V, violet : masse) ; c) R8EF appairé en PPM, LED bleue*
