@@ -91,10 +91,11 @@ Les nouvelles pièces ont été pesées sur la balance de la salle, avec une pr�
 | Récepteur R8EF | 5 g |
 | Module HC-12 avec son antenne ressort | 2 g |
 | Télémètre VL53L1X, sans sa barrette de broches | 1 g |
+| ESC terminé, avec la XT60, le condensateur et le ruban isolant (partie II.4) | 31 g |
 
-*Tableau 2. Masses des pièces reçues*
+*Tableau 2. Masses des pièces reçues et de l'ESC terminé*
 
-Ces pièces pèsent 91 g au total. L'ESC n'a pas été repesé après les finitions de la partie II.4 : sa masse est estimée à environ 31 g (30 g mesurés en séance 2, plus le ruban isolant). Le bilan de masse complet sera fait sur le drone assemblé.
+Les pièces reçues pèsent 91 g au total. L'ESC a été repesé après les finitions de la partie II.4, avec la XT60, le condensateur et le ruban isolant qui les maintient : il pèse 31 g, contre 30 g en séance 2. Le bilan de masse complet sera fait sur le drone assemblé.
 
 ### II.4. Contrôle et finitions de l'ESC
 
@@ -143,7 +144,7 @@ Deux finitions restaient à faire. D'abord, quelques brins de cuivre du fil noir
 | Finitions de l'ESC (reste de S2) | Atteint | Condensateur et brins maintenus par du ruban isolant |
 | Appairage de la radiocommande (reste de S2) | Atteint | R8EF en PPM, 4 voies lues sur la broche 19 |
 | Inventaire du matériel | Atteint | Tableau 1 |
-| Pesée des pièces reçues | Atteint | 91 g au total (Tableau 2) |
+| Pesée des pièces reçues | Atteint | 91 g au total, ESC terminé 31 g (Tableau 2) |
 | Banc d'essai des capteurs dans MultiWiiConf | Non atteint | GY-87 et GPS pas encore disponibles |
 | Montage des moteurs sur le châssis | Non atteint | Châssis pas encore livré |
 | Premier branchement de la LiPo sans hélices | Non atteint | Châssis et LiPo pas encore livrés |
