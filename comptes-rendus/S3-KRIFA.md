@@ -62,7 +62,7 @@ Le R8EF propose trois sorties : PWM, SBUS et PPM [1]. Le mode PPM a été retenu
 
 *Figure 1. a) Radiocommande T8FB allumée ; b) câblage sur la Mega 2560 Strong (bleu : broche 19, vert : 5 V, violet : masse) ; c) R8EF appairé en PPM, LED bleue*
 
-Pour lire les voies, un petit programme de test (`ppm_test.ino`) a été téléversé à la place de MultiWii. Il mesure la durée de chaque impulsion sur la broche 19 et affiche les huit voies dans le Moniteur série, à 115 200 bauds. Les quatre voies principales (AIL pour le roulis, ELE pour le tangage, GAZ et DIR pour le lacet) varient bien de 1000 à 2000 µs, avec environ 1500 µs au centre. Les voies CH5 à CH8, reliées aux interrupteurs, restent stables (Figure 2).
+Pour lire les voies, un petit programme de test (`ppm_test.ino`) a été téléversé à la place de MultiWii. Il mesure la durée de chaque impulsion sur la broche 19 et affiche les huit voies dans le Moniteur série, à 115 200 bauds. Les quatre voies principales (AIL pour le roulis, ELE pour le tangage, GAZ pour la poussée et DIR pour le lacet) varient bien de 1000 à 2000 µs, avec environ 1500 µs au centre. Les voies CH5 à CH8, reliées aux interrupteurs, restent stables (Figure 2).
 
 ![Moniteur série](../docs/images/S3-moniteur-serie.jpg)
 
@@ -156,7 +156,7 @@ Tous les objectifs qui dépendaient uniquement du matériel disponible ont été
 
 ## IV. Problèmes rencontrés et solutions
 
-Le module GPS reçu n'était pas le bon modèle : un BN-180, sans boussole, au lieu du BN-880. Il a été identifié grâce à son câble à quatre fils, rendu à M. Masson et signalé par mail.
+Le module GPS reçu n'était pas le bon modèle : un BN-180, sans boussole, au lieu du BN-880. Il a été identifié grâce à son câble à quatre fils, puis rendu à M. Masson, et l'erreur a été signalée par mail.
 
 Pour l'essai radio, les premiers fils Dupont pris étaient mâle-mâle et ne pouvaient pas se brancher sur le récepteur : ils ont été remplacés par des fils mâle-femelle. Le bouton ID SET du R8EF a été difficile à trouver : c'est un petit bouton sur la tranche du récepteur, caché sous son film de protection, que j'ai fini par retirer. Il a aussi fallu apprendre à ouvrir le Moniteur série de l'IDE Arduino et à le régler à la bonne vitesse (115 200 bauds) pour lire les valeurs.
 
@@ -166,7 +166,7 @@ Lors du contrôle de l'ESC, le mode continuité du multimètre Metrix n'apparaî
 
 Les pièces imprimées en 3D conçues en séance 1 peuvent être lancées à l'impression, pour être fixées dès la réception du châssis. Les quatre pieds se fixent sous les moteurs, désormais disponibles : l'entraxe de leurs trous sera vérifié sur un moteur avant l'impression. La boîte du colis ne dépend que du servo MG90S. En revanche, le support GPS sera vérifié sur le BN-880, et l'équerre de la caméra sur le châssis, avant d'être imprimés.
 
-Je vais ensuite essayer de faire tourner les moteurs avec l'ESC par moi-même, sans hélices, sur une alimentation de laboratoire avec limitation de courant, en attendant les LiPo. Je demanderai ensuite au professeur de vérifier et de m'aider à le finaliser.
+Je vais aussi essayer de faire tourner les moteurs avec l'ESC par moi-même, sans hélices, sur une alimentation de laboratoire avec limitation de courant, en attendant les LiPo. Je demanderai ensuite au professeur de vérifier et de m'aider à le finaliser.
 
 La séance 4 (24/11) reprendra le montage du drone si le châssis est arrivé : moteurs, ESC sur silentblocs, électronique, premier branchement de la LiPo sans hélices, puis contrôle de la masse et de la hauteur. Le banc d'essai des capteurs dans MultiWiiConf sera fait dès la réception du GY-87 et du BN-880.
 
