@@ -170,6 +170,14 @@ Je vais ensuite essayer de faire tourner les moteurs avec l'ESC par moi-même, s
 
 La séance 4 (24/11) reprendra le montage du drone si le châssis est arrivé : moteurs, ESC sur silentblocs, électronique, premier branchement de la LiPo sans hélices, puis contrôle de la masse et de la hauteur. Le banc d'essai des capteurs dans MultiWiiConf sera fait dès la réception du GY-87 et du BN-880.
 
+Si aucune nouvelle pièce n'est arrivée, la séance 4 sera consacrée aux essais possibles avec le matériel déjà reçu :
+
+- essai des moteurs avec l'ESC, sans hélices, sur l'alimentation de laboratoire, pour vérifier que les quatre moteurs tournent et relever leur sens de rotation ;
+- contrôle de l'UBEC : alimenté en 14,8 V par l'alimentation de laboratoire, sa sortie doit donner 5 V au multimètre avant d'alimenter l'électronique ;
+- soudure de la barrette de broches du VL53L1X et lecture de la hauteur mesurée sur une Mega de la salle ;
+- essai de la liaison entre les deux modules HC-12, qui transmettront les informations du drone vers le sol ;
+- impression des pièces 3D qui ne dépendent pas du châssis (pieds et boîte du colis).
+
 ## Références
 
 [1] RadioLink, *R8EF Receiver – Instruction Manual* (appairage, modes PWM, SBUS et PPM, voyant). https://www.radiolink.com
