@@ -166,7 +166,7 @@ Lors du contrôle de l'ESC, le mode continuité du multimètre Metrix n'apparaî
 
 Les pièces imprimées en 3D conçues en séance 1 peuvent être lancées à l'impression, pour être fixées dès la réception du châssis. Les quatre pieds se fixent sous les moteurs, désormais disponibles : l'entraxe de leurs trous sera vérifié sur un moteur avant l'impression. La boîte du colis ne dépend que du servo MG90S. En revanche, le support GPS sera vérifié sur le BN-880, et l'équerre de la caméra sur le châssis, avant d'être imprimés.
 
-Un essai des moteurs avec l'ESC sera demandé au professeur, sur une alimentation de laboratoire, avant l'arrivée des LiPo.
+Je vais ensuite essayer de faire tourner les moteurs avec l'ESC par moi-même, sans hélices, sur une alimentation de laboratoire avec limitation de courant, en attendant les LiPo. Je demanderai ensuite au professeur de vérifier et de m'aider à le finaliser.
 
 La séance 4 (24/11) reprendra le montage du drone si le châssis est arrivé : moteurs, ESC sur silentblocs, électronique, premier branchement de la LiPo sans hélices, puis contrôle de la masse et de la hauteur. Le banc d'essai des capteurs dans MultiWiiConf sera fait dès la réception du GY-87 et du BN-880.
 
