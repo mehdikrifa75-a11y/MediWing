@@ -152,6 +152,8 @@ Deux finitions restaient à faire. D'abord, quelques brins de cuivre du fil noir
 
 *Tableau 5. Bilan de la séance par rapport au planning*
 
+Tous les objectifs qui dépendaient uniquement du matériel disponible ont été atteints. Les objectifs non atteints ne pouvaient pas être réalisés pendant cette séance : ils nécessitent des pièces qui n'étaient pas encore en ma possession (châssis, GY-87, GPS BN-880, LiPo). Ils ne sont pas abandonnés, mais reportés aux prochaines séances, dès la réception de ces pièces.
+
 ## IV. Problèmes rencontrés et solutions
 
 Le module GPS reçu n'était pas le bon modèle : un BN-180, sans boussole, au lieu du BN-880. Il a été identifié grâce à son câble à quatre fils, rendu à M. Masson et signalé par mail.
