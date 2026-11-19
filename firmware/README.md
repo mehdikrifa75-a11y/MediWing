@@ -8,7 +8,7 @@ Le code de `MultiWii/` n'a pas été écrit pour ce projet : c'est MultiWii 2.4,
 
 - Source : https://github.com/multiwii/multiwii-firmware, tag `release-2.4` (commit `30af392`).
 - Licence : GNU GPL version 3 ou ultérieure (en-tête de `MultiWii.cpp`). Le texte complet est dans `MultiWii/LICENSE`. Ce dossier modifié reste sous la même licence.
-- Le commit « sources MultiWii 2.4 d'origine » contient le code sans aucune modification. Les commits suivants ajoutent les réglages MediWing : `git diff` entre les deux montre exactement ce qui a changé. Les lignes modifiées sont aussi repérées par le commentaire `MediWing` dans le code.
+- Le commit « sources MultiWii 2.4 d'origine » contient le code sans aucune modification. Les commits suivants ajoutent les réglages MediWing : `git diff` entre les deux montre exactement ce qui a changé.
 
 ## Ce qui a été modifié
 
