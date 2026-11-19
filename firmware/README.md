@@ -32,6 +32,10 @@ Compilation vérifiée pour l'ATmega2560 (avr-gcc 7.3, cœur Arduino AVR) : 31 2
 5. Vérifier (✓), puis Téléverser (→).
 6. Ouvrir MultiWiiConf à 115200 bauds sur le même port : les capteurs ACC, BARO, MAG, GPS doivent être allumés.
 
+## Test du récepteur (`ppm_test/`)
+
+`ppm_test/ppm_test.ino` sert à vérifier la radio sans MultiWii (séance 3) : il lit le signal PPM du R8EF sur la broche 19 et affiche les 8 voies dans le Moniteur série à 115200 bauds (environ 1000 à 2000 µs). Après le test, retéléverser `MultiWii.ino`.
+
 ## Câblage prévu
 
 | Élément | Broche Mega |
