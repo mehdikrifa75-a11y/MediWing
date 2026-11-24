@@ -11,6 +11,4 @@ Pièces à imprimer en 3D (conçues sous Fusion 360 en séance 1) :
 
 Vue d'ensemble : [`planche_pieces`](croquis/planche_pieces.png). Chaque croquis existe aussi en `.svg`.
 
-Fichiers d'impression (`stl/`) : boîte, couvercle, support GPS, équerre caméra et pied (×4). Les cotes du support GPS et de l'équerre caméra seront vérifiées sur le BN-880 et le châssis avant impression.
-
 Scripts Fusion 360 (`scripts-fusion/`) : un script Python par pièce, plus `DroneComplet` (prototype numérique du drone assemblé). `SupportLoquet` correspond à une pièce abandonnée en séance 1 (servo intégré à la boîte).
