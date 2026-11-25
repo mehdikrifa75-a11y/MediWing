@@ -1,6 +1,6 @@
 # CAO
 
-Pièces à imprimer en 3D (conçues sous Fusion 360 en séance 1) :
+Pièces à imprimer en 3D (modélisées sous Fusion 360) :
 
 | Pièce | Croquis coté |
 |---|---|
@@ -9,6 +9,6 @@ Pièces à imprimer en 3D (conçues sous Fusion 360 en séance 1) :
 | Équerre caméra + VL53L1X | [`3_equerre_camera`](croquis/3_equerre_camera.png) |
 | Pied d'atterrissage (×4) | [`4_pied`](croquis/4_pied.png) |
 
-Vue d'ensemble : [`planche_pieces`](croquis/planche_pieces.png). Chaque croquis existe aussi en `.svg`.
+Chaque croquis existe aussi en `.svg`.
 
 Fichiers d'impression (`stl/`) : boîte, couvercle, support GPS, équerre caméra et pied (×4, version corrigée en séance 4 : trous à 9 mm, tube de 8 mm, hauteur 30 mm, patin conique imprimable sans supports). Les cotes du support GPS et de l'équerre caméra seront vérifiées sur le BN-880 et le châssis avant impression.

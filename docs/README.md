@@ -1,4 +1,4 @@
 # Documents
 
 - Rapport bibliographique (PDF).
-- `images/` : photos des séances, utilisées dans les comptes rendus.
+- `images/` : photos et figures des comptes rendus des séances 1 et 2.
